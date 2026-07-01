@@ -41,11 +41,69 @@
       </div>
     </section>
 
-    <!-- Movie Grid -->
-    <section class="movie-container">
-      <h2 class="section-title">Trending Now</h2>
-      <main id="main" class="grid"></main>
+    <!-- Movie Rows -->
+    <section class="movie-container" id="movie-container">
+      <div class="movie-row-container" id="search-results-container" style="display:none;">
+          <h2 class="section-title">Search Results</h2>
+          <main id="search-results" class="row"></main>
+      </div>
+      
+      <div class="movie-row-container" id="my-list-container" style="display:none;">
+          <h2 class="section-title">My List</h2>
+          <main id="my-list" class="row"></main>
+      </div>
+
+      <div class="movie-row-container">
+          <h2 class="section-title">Trending Now</h2>
+          <main id="trending" class="row"></main>
+      </div>
+
+      <div class="movie-row-container">
+          <h2 class="section-title">Top Rated</h2>
+          <main id="top-rated" class="row"></main>
+      </div>
+
+      <div class="movie-row-container">
+          <h2 class="section-title">Action & Thrillers</h2>
+          <main id="action" class="row"></main>
+      </div>
+
+      <div class="movie-row-container">
+          <h2 class="section-title">Comedy Movies</h2>
+          <main id="comedy" class="row"></main>
+      </div>
+
+      <div class="movie-row-container">
+          <h2 class="section-title">Horror Movies</h2>
+          <main id="horror" class="row"></main>
+      </div>
     </section>
+
+    <!-- Modal Details & Trailer -->
+    <div id="movie-modal" class="modal-overlay">
+      <div class="modal-content">
+        <button id="close-modal" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-body">
+          <div class="modal-video" id="modal-video">
+            <!-- iframe YouTube inserted here -->
+          </div>
+          <div class="modal-info">
+            <h2 id="modal-title" class="text-3xl font-bold">Movie Title</h2>
+            <div class="modal-meta">
+              <span id="modal-year" class="year">2026</span>
+              <span id="modal-rating" class="rating"><i class="fa-solid fa-star text-warning"></i> 8.5</span>
+              <span id="modal-runtime" class="runtime">120 min</span>
+            </div>
+            <div class="modal-genres" id="modal-genres"></div>
+            <p id="modal-overview" class="overview-text">Overview text...</p>
+            <h4 class="cast-title">Top Cast</h4>
+            <div class="modal-cast" id="modal-cast">
+              <!-- Cast images and names inserted here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer>
